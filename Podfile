@@ -8,6 +8,7 @@ target 'Digio Test' do
   # Pods for Digio Test
 pod 'RxSwift'
 pod 'RxGesture'
+pod 'SwiftLint'
 
   target 'Digio TestTests' do
     inherit! :search_paths
