@@ -9,7 +9,7 @@ class HomeView: UIView {
     var mainLabel: UILabel = {
        var lbl = UILabel()
         lbl.text = "Digio"
-        lbl.textColor = UIColor(red: (255/255), green: (255/255), blue: (255/255), alpha: 1.0)
+        lbl.textColor = .white
         lbl.font = UIFont.systemFont(ofSize: 16)
         lbl.translatesAutoresizingMaskIntoConstraints = false
         return lbl
@@ -26,7 +26,7 @@ class HomeView: UIView {
     }
 
     func createSubviews() {
-        backgroundColor = UIColor(red: (18/255), green: (40/255), blue: (91/255), alpha: 1.0)
+        backgroundColor = .primaryColor
         setupMainLabel()
 
     }

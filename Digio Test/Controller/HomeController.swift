@@ -7,6 +7,7 @@ import UIKit
 class HomeController: UIViewController {
 
     var presentationView: HomeView = HomeView()
+    private var viewModel: HomeViewModel = HomeViewModel()
 
     override func loadView() {
         view = presentationView
@@ -14,6 +15,7 @@ class HomeController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        viewModel.setupApi()
     }
 
     override func viewWillAppear(_ animated: Bool) {
