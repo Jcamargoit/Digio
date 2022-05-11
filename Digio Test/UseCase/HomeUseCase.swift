@@ -9,7 +9,7 @@ import UIKit
 
 class HomeUseCase {
     static var Get:  Resource<HomeResultCodable> = {
-        guard let url = URL(string: .urlApi) else {
+        guard let url = URL(string: Constants.API.baseUrl) else {
             fatalError("URL is incorrect!")
         }
         return Resource<HomeResultCodable>(url: url)

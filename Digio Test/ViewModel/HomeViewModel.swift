@@ -11,7 +11,6 @@ class HomeViewModel {
     func setupApi() {APIService().load(resource: HomeUseCase.Get) { [] result in
             switch result {
             case .success(let orders):
-
                 self.codableResultHome = orders
                 print("Sucesso!!!", orders)
             case .failure(let error):

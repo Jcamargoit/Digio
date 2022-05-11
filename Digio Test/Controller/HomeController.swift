@@ -8,6 +8,7 @@ class HomeController: UIViewController {
 
     var presentationView: HomeView = HomeView()
     private var viewModel: HomeViewModel = HomeViewModel()
+    private var startMonitoring: NetworkMonitor = NetworkMonitor()
 
     override func loadView() {
         view = presentationView

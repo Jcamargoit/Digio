@@ -17,7 +17,7 @@ class LaucheScreenController: UIViewController {
         super.viewDidLoad()
 
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-            let viewController = HomeController()
+            let viewController = ProductResultController()
             self.navigationController?.pushViewController(viewController, animated: true)
         }
     }

@@ -19,8 +19,6 @@
 			</array>
 		</dict>
 	</dict>
-	<key>CFBundleIdentifier</key>
-	<string>Light</string>
 	<key>UIStatusBarStyle</key>
 	<string>UIStatusBarStyleLightContent</string>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
