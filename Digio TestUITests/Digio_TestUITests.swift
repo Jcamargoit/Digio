@@ -4,7 +4,6 @@
 //
 //  Created by Juninho on 04/05/22.
 //
-
 import XCTest
 
 class DigioTestUITests: XCTestCase {
@@ -14,7 +13,6 @@ class DigioTestUITests: XCTestCase {
 
         // In UI tests it is usually best to stop immediately when a failure occurs.
         continueAfterFailure = false
-
     }
 
     override func tearDownWithError() throws {
@@ -26,7 +24,6 @@ class DigioTestUITests: XCTestCase {
         let app = XCUIApplication()
         app.launch()
 
-        // Use recording to get started writing UI tests.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
     }
 

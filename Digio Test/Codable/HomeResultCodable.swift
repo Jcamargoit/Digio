@@ -1,13 +1,9 @@
-//
-//  HomeCodable.swift
+//  HomeResultCodable.swift
 //  Digio Test
-//
-//  Created by Juninho on 10/05/22.
-//
 
 import UIKit
 
-// MARK: - HomeModel
+// MARK: - HomeResultCodable
 struct HomeResultCodable: Codable {
     let spotlight: [Spotlight]
     let products: [Product]

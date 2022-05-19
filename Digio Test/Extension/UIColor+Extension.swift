@@ -1,10 +1,6 @@
-//
 //  UIColor+Extension.swift
-//  Quick Wait Xib
-//
-//  Created by Juninho on 08/04/22.
-//
-import Foundation
+//  Digio Test
+
 import UIKit
 
 extension UIColor {

@@ -1,11 +1,7 @@
-//
 //  Constants.swift
-//  Quick Wait Xib
-//
-//  Created by Framework Digital on 16/03/22.
-//
+//  Digio Test
 
-import Foundation
+import UIKit
 
 struct Constants {
     struct API {

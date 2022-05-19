@@ -1,10 +1,12 @@
 //  APIService.swift
+//  Digio Test
 
 import UIKit
+import RxSwift
 
 enum NetworkError: Error {
     case decodingError // JASON MODEL
-    case domainError // ErrO 500
+    case domainError // 500
     case urlError
     case unauthorized
     case serverError
@@ -28,46 +30,47 @@ extension Resource {
 
 class APIService {
 
-    func load<T>(resource: Resource<T>, completion: @escaping (Result<T, NetworkError>) -> Void) {
-        var request = URLRequest(url: resource.url)
-        request.httpMethod = resource.httpMethod.rawValue
-        request.httpBody = resource.body
-        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+    func load<T>(resource: Resource<T>) -> Observable<T> {
+        return Observable<T>.create { observer in
 
-        URLSession.shared.dataTask(with: request) { data, response, error in
+            var request = URLRequest(url: resource.url)
+            request.httpMethod = resource.httpMethod.rawValue
 
-            // Perguntar pro Jardel
-          let nsHTTPResponse = response as! HTTPURLResponse
-          let  statusCode = nsHTTPResponse.statusCode
+            URLSession.shared.dataTask(with: request) { data, response, error in
 
-            let contents = String(data: data!, encoding: .utf8)
-            print("meu status contents ", contents ," body ", resource.body , " Status ", statusCode)
+                // Perguntar pro Jardel
+                // QUEBRA O COD SE NÃO TIVER INTERNET
+                let nsHTTPResponse = response as! HTTPURLResponse
+                let  statusCode = nsHTTPResponse.statusCode
 
-            guard let data = data, error == nil else {
-                completion(.failure(.domainError))
-                return
-            }
-            let result = try? JSONDecoder().decode(T.self, from: data)
-
-            if let result = result {
-                DispatchQueue.main.async {
-                    completion(.success(result))
-                }
-            } else {
-                if statusCode == 401 {
-                    completion(.failure(.unauthorized))
+                guard let data = data, error == nil else {
+                    observer.onError(NetworkError.domainError)
                     return
                 }
-                if statusCode == 404 {
-                    completion(.failure(.urlError))
-                    return
+                let result = try? JSONDecoder().decode(T.self, from: data)
+
+                if let result = result {
+                    DispatchQueue.main.async {
+                        observer.onNext(result)
+                        observer.onCompleted()
+                    }
+                } else {
+                    if statusCode == 401 {
+                        observer.onError(NetworkError.unauthorized)
+                        return
+                    }
+                    if statusCode == 404 {
+                        observer.onError(NetworkError.urlError)
+                        return
+                    }
+                    if statusCode == 500 {
+                        observer.onError(NetworkError.serverError)
+                        return
+                    }
+                    observer.onError(NetworkError.decodingError)
                 }
-                if statusCode == 500 {
-                    completion(.failure(.serverError))
-                    return
-                }
-                completion(.failure(.decodingError))
-            }
-        }.resume()
+            }.resume()
+            return Disposables.create {}
+        }
     }
 }

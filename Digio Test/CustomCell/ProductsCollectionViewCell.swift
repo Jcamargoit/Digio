@@ -1,0 +1,43 @@
+//  ProductsCollectionViewCell.swift
+//  Digio Test
+
+import UIKit
+import SDWebImage
+
+class ProductsCollectionViewCell: UICollectionViewCell {
+
+    static let indentifier = "ProductsCollectionViewCell"
+
+    private let myImageView: UIImageView = {
+        let imageView = UIImageView()
+        imageView.layer.shadowOpacity = 0.6
+        imageView.layer.shadowColor = UIColor.gray.cgColor
+        imageView.layer.shadowOffset = CGSize.init(width: 20, height: 20)
+        imageView.layer.cornerRadius = 10.5
+        imageView.layer.masksToBounds = true
+        return imageView
+    }()
+
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        contentView.addSubview(myImageView)
+    }
+
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+
+    override func layoutSubviews() {
+        super.layoutSubviews()
+
+        myImageView.frame = CGRect(x: 15,
+                                   y: 15,
+                                   width: contentView.frame.size.width-30,
+                                   height: contentView.frame.size.height-50)
+    }
+
+    public func configure(with model: Product) {
+        let url = NSURL(string: model.imageURL)
+        myImageView.sd_setImage(with: url! as URL)
+    }
+}

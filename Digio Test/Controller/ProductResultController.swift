@@ -1,15 +1,14 @@
-//
 //  ProductResultController.swift
 //  Digio Test
-//
-//  Created by Juninho on 10/05/22.
-//
 
 import UIKit
 
 class ProductResultController: UIViewController {
+
+    // MARK: - Variable And Constants
     var presentationView: ProductResultView = ProductResultView()
 
+    // MARK: - Lifecycle
     override func loadView() {
         view = presentationView
     }
@@ -17,4 +16,14 @@ class ProductResultController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(false, animated: animated)
+        self.showLoading(enable: false)
+    }
+
+    // MARK: - Func
 }
+
+// MARK: - Extension ProductResultController

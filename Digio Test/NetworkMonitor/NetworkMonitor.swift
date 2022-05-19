@@ -1,8 +1,5 @@
-//
 //  NetworkMonitor.swift
 //  Digio Test
-//
-//  Created by Juninho on 10/05/22.
 
 import UIKit
 import Network
