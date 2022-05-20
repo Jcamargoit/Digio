@@ -1,5 +1,4 @@
 import UIKit
-// import SDWebImage
 
 class ProductsCollectionViewCell: UICollectionViewCell {
 
@@ -35,36 +34,25 @@ class ProductsCollectionViewCell: UICollectionViewCell {
         super.layoutSubviews()
 
         backgroundImageView.frame = CGRect(x: 0,
-                              y: 0,
-                              width: contentView.frame.size.width-0,
-                              height: contentView.frame.size.height-0)
-
+                                           y: 0,
+                                           width: contentView.frame.size.width-0,
+                                           height: contentView.frame.size.height-0)
         productsImageView.frame = CGRect(x: 15,
-                                   y: 20,
-                                   width: contentView.frame.size.width-30,
-                                   height: contentView.frame.size.height-40)
+                                         y: 20,
+                                         width: contentView.frame.size.width-30,
+                                         height: contentView.frame.size.height-40)
     }
-
     public func configure(with model: Product) {
-         print("URLS", model.imageURL)
-
         if let url = NSURL(string: model.imageURL) {
-
-            let dataTask = URLSession.shared.dataTask(with: url as URL) { [weak self] (data, _, error) in
-                if let error = error {
-                    print(error)
-                }
-                if let data = data {
-                    DispatchQueue.main.async {
-                        if let image = UIImage(data: data) {
-                            self?.productsImageView.image = image
-                        } else {
-                            self?.productsImageView.image = UIImage(named: "error")
-                        }
-                    }
+            CheckImageUrl().checkUrl(url: url as URL) { [weak self] result in
+                guard let self = self else { return }
+                switch result {
+                case .success(let image):
+                    self.productsImageView.image = image
+                case .failure:
+                    self.productsImageView.image = UIImage(named: "error")
                 }
             }
-            dataTask.resume()
         }
     }
 }

@@ -27,6 +27,8 @@
 		9C7DFBEF282B603B00FF0AF2 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C7DFBEE282B603A00FF0AF2 /* UIView+Extensions.swift */; };
 		9C802302282D9F3E002C8C5C /* SpotlightTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C802301282D9F3E002C8C5C /* SpotlightTableViewCell.swift */; };
 		9C802306282DA388002C8C5C /* SpotlighCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C802305282DA388002C8C5C /* SpotlighCollectionViewCell.swift */; };
+		9C9B723E2837CA3700A5CFB0 /* LockOrientationApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C9B723D2837CA3700A5CFB0 /* LockOrientationApp.swift */; };
+		9C9B72402837D91800A5CFB0 /* CheckImageUrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C9B723F2837D91800A5CFB0 /* CheckImageUrl.swift */; };
 		9C9F784E2835B5790047ABDF /* ShowLoading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C9F784D2835B5790047ABDF /* ShowLoading.swift */; };
 		9C9F78502835B5900047ABDF /* SimplePopUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C9F784F2835B58F0047ABDF /* SimplePopUp.swift */; };
 		9C9F78D22835C4D70047ABDF /* Digio_SnapshotTesting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C9F78D12835C4D70047ABDF /* Digio_SnapshotTesting.swift */; };
@@ -88,6 +90,8 @@
 		9C7DFBEE282B603A00FF0AF2 /* UIView+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
 		9C802301282D9F3E002C8C5C /* SpotlightTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotlightTableViewCell.swift; sourceTree = "<group>"; };
 		9C802305282DA388002C8C5C /* SpotlighCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotlighCollectionViewCell.swift; sourceTree = "<group>"; };
+		9C9B723D2837CA3700A5CFB0 /* LockOrientationApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LockOrientationApp.swift; sourceTree = "<group>"; };
+		9C9B723F2837D91800A5CFB0 /* CheckImageUrl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckImageUrl.swift; sourceTree = "<group>"; };
 		9C9F784D2835B5790047ABDF /* ShowLoading.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowLoading.swift; sourceTree = "<group>"; };
 		9C9F784F2835B58F0047ABDF /* SimplePopUp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimplePopUp.swift; sourceTree = "<group>"; };
 		9C9F78CF2835C4D70047ABDF /* Digio SnapshotTesting.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Digio SnapshotTesting.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -222,6 +226,15 @@
 			path = CustomCell;
 			sourceTree = "<group>";
 		};
+		9C9B723C2837CA2600A5CFB0 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				9C9B723D2837CA3700A5CFB0 /* LockOrientationApp.swift */,
+				9C9B723F2837D91800A5CFB0 /* CheckImageUrl.swift */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
 		9C9F78D02835C4D70047ABDF /* Digio SnapshotTesting */ = {
 			isa = PBXGroup;
 			children = (
@@ -274,6 +287,7 @@
 				9C3F228C282A009B00572245 /* Model */,
 				9CB522F72836A1DF00083481 /* Protocolo */,
 				9C3F2297282A0DDB00572245 /* UseCase */,
+				9C9B723C2837CA2600A5CFB0 /* Utility */,
 				9CC2F3BE2822C3FD001BC880 /* View */,
 				9C3F228F282A00E900572245 /* ViewModel */,
 				9CC2F3922822BC33001BC880 /* Assets.xcassets */,
@@ -527,6 +541,7 @@
 				9CB522F92836A1F000083481 /* CollectionTableViewCellDelegate.swift in Sources */,
 				9C7DFBEB282B583E00FF0AF2 /* HomeResultView.swift in Sources */,
 				9C176A9E2833D8E100805038 /* CollectionViewCellModel.swift in Sources */,
+				9C9B723E2837CA3700A5CFB0 /* LockOrientationApp.swift in Sources */,
 				9C176AA92833ECA500805038 /* CashTableViewCell.swift in Sources */,
 				9C44D0E82829859100CBD986 /* APIService.swift in Sources */,
 				9C47CDA228296663001C40F9 /* LauncheScreenView.swift in Sources */,
@@ -538,6 +553,7 @@
 				9C802302282D9F3E002C8C5C /* SpotlightTableViewCell.swift in Sources */,
 				9C3F2299282A0E7E00572245 /* HomeUseCase.swift in Sources */,
 				9CB522FB2836A44100083481 /* ResultCollectionViewCellModel.swift in Sources */,
+				9C9B72402837D91800A5CFB0 /* CheckImageUrl.swift in Sources */,
 				9C176AA02833E3ED00805038 /* LoadingViewController.swift in Sources */,
 				9C3F228E282A00B400572245 /* HomeModel.swift in Sources */,
 				9CC2F38A2822BC32001BC880 /* AppDelegate.swift in Sources */,
@@ -764,7 +780,7 @@
 				INFOPLIST_KEY_CFBundleDisplayName = digio;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
@@ -795,7 +811,7 @@
 				INFOPLIST_KEY_CFBundleDisplayName = digio;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UIUserInterfaceStyle = Light;

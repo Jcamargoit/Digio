@@ -26,8 +26,17 @@ class HomeResultController: UIViewController {
         super.viewDidLoad()
         self.presentationView.descriptionLabel.text = self.result?.description
 
-        let url = NSURL(string: self.result?.image ?? "")
-        self.presentationView.bannerImage.sd_setImage(with: url! as URL)
+        if let url = NSURL(string: self.result?.image ?? "") {
+            CheckImageUrl().checkUrl(url: url as URL) { [weak self] result in
+                guard let self = self else { return }
+                switch result {
+                case .success(let image):
+                    self.presentationView.bannerImage.image = image
+                case .failure:
+                    self.presentationView.bannerImage.image = UIImage(named: "error")
+                }
+            }
+        }
     }
 
     override func viewWillAppear(_ animated: Bool) {

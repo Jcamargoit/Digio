@@ -38,6 +38,11 @@ class HomeController: UIViewController {
         table.dataSource = self
     }
 
+    override func viewDidAppear(_ animated: Bool) {
+       super.viewDidAppear(animated)
+        LockOrientationApp.lockOrientation(.portrait)
+   }
+
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(true, animated: animated)
@@ -174,6 +179,7 @@ extension HomeController: CollectionTableViewCellDelegate {
             }
         }
     }
+
     func didSelectItemProduct(with model: Product) {
         self.showLoading(enable: true)
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
@@ -194,19 +200,8 @@ extension HomeController: HomeViewModelDelegate {
     }
 
     func failureRequest(_ error: Error) {
-        switch error {
-        case NetworkError.decodingError:
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
             self.simplePopUp(title: "Erro:", mensage: "Tente novamente mais tarde.")
-        case NetworkError.domainError:
-            print("")
-        case NetworkError.urlError:
-            print("")
-        case NetworkError.unauthorized:
-            print("")
-        case NetworkError.serverError:
-            print("")
-        default:
-            print("")
         }
     }
 }
