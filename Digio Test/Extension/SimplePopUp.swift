@@ -1,6 +1,3 @@
-//  SimplePopUp.swift
-//  Digio Test
-
 import UIKit
 
 extension UIViewController {

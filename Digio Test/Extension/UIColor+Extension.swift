@@ -1,6 +1,3 @@
-//  UIColor+Extension.swift
-//  Digio Test
-
 import UIKit
 
 extension UIColor {

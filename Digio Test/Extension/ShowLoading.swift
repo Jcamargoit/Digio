@@ -1,15 +1,12 @@
-//  ShowLoading.swift
-//  Digio Test
-
 import UIKit
 
 extension UIViewController {
-    
+
     func showLoading(enable: Bool = true) {
         let loadingVC = LoadingViewController()
         loadingVC.modalPresentationStyle = .overCurrentContext
         loadingVC.modalTransitionStyle = .crossDissolve
-        
+
         if enable {
             // inicio do load
             present(loadingVC, animated: true, completion: nil)

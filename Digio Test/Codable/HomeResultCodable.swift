@@ -1,6 +1,3 @@
-//  HomeResultCodable.swift
-//  Digio Test
-
 import UIKit
 
 // MARK: - HomeResultCodable

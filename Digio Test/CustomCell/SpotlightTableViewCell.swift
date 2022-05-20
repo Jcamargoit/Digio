@@ -1,11 +1,4 @@
-//  SpotlightTableViewCell.swift
-//  Digio Test
-
 import UIKit
-
-protocol CollectionTableViewCellDelegate: AnyObject {
-    func didSelectItem(with model: Spotlight)
-}
 
 class SpotlightTableViewCell: UITableViewCell {
 
@@ -35,7 +28,6 @@ class SpotlightTableViewCell: UITableViewCell {
                                 forCellWithReuseIdentifier: SpotlighCollectionViewCell.indentifier)
         collectionView.delegate = self
         collectionView.dataSource = self
-
         contentView.addSubview(collectionView)
     }
 
@@ -52,11 +44,19 @@ class SpotlightTableViewCell: UITableViewCell {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-
 }
 
+// MARK: - extension
 extension SpotlightTableViewCell: UICollectionViewDelegate,
                                   UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+    private func configureCell(_ indexPath: IndexPath, collectionview: UICollectionView,
+                               _ model: Spotlight) -> UICollectionViewCell {
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: SpotlighCollectionViewCell.indentifier,
+                                                            for: indexPath) as? SpotlighCollectionViewCell
+        else { return UICollectionViewCell() }
+        cell.configure(with: model)
+        return cell
+    }
 
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
@@ -69,15 +69,12 @@ extension SpotlightTableViewCell: UICollectionViewDelegate,
     func collectionView(_ collectionView: UICollectionView,
                         cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let model = models[indexPath.row]
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: SpotlighCollectionViewCell.indentifier,
-                                                      for: indexPath) as! SpotlighCollectionViewCell
-        cell.configure(with: model)
-        return cell
+        return configureCell(indexPath, collectionview: collectionView, model)
     }
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let model = models[indexPath.row]
         collectionView.deselectItem(at: indexPath, animated: true)
-        delegate?.didSelectItem(with: model)
+        delegate?.didSelectItemSpotlight(with: model)
     }
 }

@@ -1,14 +1,11 @@
-//  HomeController.swift
-//  Digio Test
-
 import UIKit
 
 class HomeController: UIViewController {
 
     // MARK: - Variable And Constants
-    private var models = [CellModel]()
+    private var models = [CollectionViewCellModel]()
     private var homeViewModel = HomeViewModel()
-    let appDelegate = UIApplication.shared.delegate as! AppDelegate
+    let appDelegate = UIApplication.shared.delegate as? AppDelegate
 
     private let table: UITableView = {
         let table = UITableView(frame: .zero, style: .grouped)
@@ -24,10 +21,15 @@ class HomeController: UIViewController {
     }()
 
     // MARK: - Lifecycle
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        table.frame = view.bounds
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        homeViewModel.delegate = self
         homeViewModel.setupApi()
+        homeViewModel.delegate = self
         view.addSubview(table)
         table.backgroundColor = .white
         table.separatorColor = .clear
@@ -39,11 +41,6 @@ class HomeController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(true, animated: animated)
-    }
-
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
-        table.frame = view.bounds
     }
 
     // MARK: - Func
@@ -81,8 +78,38 @@ class HomeController: UIViewController {
     }
 }
 
-// MARK: - Extension HomeController
+// MARK: - Extension
 extension HomeController: UITableViewDelegate, UITableViewDataSource {
+
+    private func configureSpotlightCell(_ indexPath: IndexPath, tableview: UITableView,
+                                        model: [Spotlight]) -> UITableViewCell {
+        guard let cell = tableview.dequeueReusableCell(withIdentifier: SpotlightTableViewCell.identifier,
+                                                       for: indexPath) as? SpotlightTableViewCell
+        else { return UITableViewCell() }
+        cell.configure(with: model)
+        cell.delegate = self
+        return cell
+    }
+
+    private func configureCashCell(_ indexPath: IndexPath, tableview: UITableView, model: [Cash]) -> UITableViewCell {
+        guard let cell = tableview.dequeueReusableCell(withIdentifier: CashTableViewCell.identifier,
+                                                       for: indexPath) as? CashTableViewCell
+        else { return UITableViewCell() }
+        cell.configure(with: model)
+        cell.delegate = self
+        return cell
+    }
+
+    private func configureProductsCell(_ indexPath: IndexPath, tableview: UITableView,
+                                       model: [Product]) -> UITableViewCell {
+        guard let cell = tableview.dequeueReusableCell(withIdentifier: ProductsTableViewCell.identifier,
+                                                       for: indexPath) as? ProductsTableViewCell
+        else { return UITableViewCell() }
+        cell.configure(with: model)
+        cell.delegate = self
+        return cell
+    }
+
     func tableView( _ tableView : UITableView,  titleForHeaderInSection section: Int) -> String? {
         switch models[section] {
         case .collectionView: return "Spotlight"
@@ -106,56 +133,58 @@ extension HomeController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         switch models[indexPath.section] {
         case .collectionView(let models, _):
-            let cell = tableView.dequeueReusableCell(withIdentifier: SpotlightTableViewCell.identifier,
-                                                     for: indexPath) as! SpotlightTableViewCell
-            cell.configure(with: models)
-            cell.delegate = self
-            return cell
+            return configureSpotlightCell(indexPath, tableview: tableView, model: models)
         case .collectionViewCash(let models, _):
-            let cell = tableView.dequeueReusableCell(withIdentifier: CashTableViewCell.identifier,
-                                                     for: indexPath) as! CashTableViewCell
-            cell.configure(with: models)
-            cell.delegate = self
-            return cell
+            return configureCashCell(indexPath, tableview: tableView, model: models)
         case .collectionViewProducts(let models, _):
-            let cell = tableView.dequeueReusableCell(withIdentifier: ProductsTableViewCell.identifier,
-                                                     for: indexPath) as! ProductsTableViewCell
-            cell.configure(with: models)
-            cell.delegate = self
-            return cell
-        }
-    }
-
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        tableView.deselectRow(at: indexPath, animated: true)
-        self.showLoading(enable: true)
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-            self.showLoading(enable: false)
-
-            let viewController = ProductResultController()
-            self.navigationController?.pushViewController(viewController, animated: true)
+            return configureProductsCell(indexPath, tableview: tableView, model: models)
         }
     }
 
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         switch models[indexPath.section] {
-        case .collectionView(_, let rows): return 90 * CGFloat(rows)
-        case .collectionViewProducts(_, let rows): return 55 * CGFloat(rows)
+        case .collectionView(_, let rows): return 100 * CGFloat(rows)
         case .collectionViewCash(_, let rows): return 60 * CGFloat(rows)
+        case .collectionViewProducts(_, let rows): return 55 * CGFloat(rows)
         }
     }
 }
 
 extension HomeController: CollectionTableViewCellDelegate {
-    func didSelectItem(with model: Spotlight) {
-        print("Modelo")
+    func didSelectItemSpotlight(with model: Spotlight) {
+        if let navigation = self.navigationController {
+            self.showLoading(enable: true)
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                self.showLoading(enable: false)
+                self.homeViewModel.goToResult(model: ResultCollectionViewCellModel(description:
+                                                                                    model.spotlightDescription,
+                                                            image: model.bannerURL), controller: navigation)
+            }
+        }
     }
 
-    //    func didSelectItem(with model: Spotlight) {
-    //        let viewController = ProductResultController()
-    //        self.navigationController?.pushViewController(viewController, animated: true)
-    //    }
-
+    func didSelectItemCash(with model: Cash) {
+        self.showLoading(enable: true)
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+            if let navigation = self.navigationController {
+                self.showLoading(enable: false)
+                self.homeViewModel.goToResult(model: ResultCollectionViewCellModel(description:
+                                                                                    model.cashDescription,
+                                                            image: model.bannerURL), controller: navigation)
+            }
+        }
+    }
+    func didSelectItemProduct(with model: Product) {
+        self.showLoading(enable: true)
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+            if let navigation = self.navigationController {
+                self.showLoading(enable: false)
+                self.homeViewModel.goToResult(model: ResultCollectionViewCellModel(description:
+                                                                                    model.productDescription,
+                                                            image: model.imageURL), controller: navigation)
+            }
+        }
+    }
 }
 
 extension HomeController: HomeViewModelDelegate {
@@ -167,7 +196,7 @@ extension HomeController: HomeViewModelDelegate {
     func failureRequest(_ error: Error) {
         switch error {
         case NetworkError.decodingError:
-            print("")
+            self.simplePopUp(title: "Erro:", mensage: "Tente novamente mais tarde.")
         case NetworkError.domainError:
             print("")
         case NetworkError.urlError:
@@ -175,7 +204,7 @@ extension HomeController: HomeViewModelDelegate {
         case NetworkError.unauthorized:
             print("")
         case NetworkError.serverError:
-            simplePopUp(title: "Erro:", mensage: "Tente novamente mais tarde.")
+            print("")
         default:
             print("")
         }

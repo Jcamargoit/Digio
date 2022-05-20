@@ -1,6 +1,3 @@
-//  ViewModel.swift
-//  Digio Test
-
 import UIKit
 import RxSwift
 
@@ -10,16 +7,16 @@ protocol HomeViewModelDelegate: AnyObject {
 }
 
 class HomeViewModel {
-    
-    weak var delegate: HomeViewModelDelegate?
-    
-    var disposable: DisposeBag = DisposeBag()
-    
+
+    // MARK: - Variable And Constants
     private var model: HomeModel = HomeModel()
+    weak var delegate: HomeViewModelDelegate?
+    var disposable: DisposeBag = DisposeBag()
     var codableResultHome: HomeResultCodable?
-    
+
+    // MARK: - Func
     func setupApi() {
-        APIService().load(resource: HomeUseCase.Get).asObservable()
+        APIService().load(resource: HomeUseCase.get).asObservable()
             .subscribe(
                 onNext: { result in
                     print("Sucesso!!!", result)
@@ -30,5 +27,10 @@ class HomeViewModel {
                     print("Error ", error)
                     self.delegate?.failureRequest(error)
                 }).disposed(by: disposable)
+    }
+
+    func goToResult(model: ResultCollectionViewCellModel,controller: UINavigationController) {
+        let viewController = HomeResultController(model: model)
+        controller.pushViewController(viewController, animated: true)
     }
 }

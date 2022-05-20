@@ -1,6 +1,3 @@
-//  LaucheScreenController.swift
-//  Digio Test
-
 import UIKit
 
 class LaucheScreenController: UIViewController {

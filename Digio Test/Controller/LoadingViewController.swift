@@ -1,6 +1,3 @@
-//  LoadingViewController.swift
-//  Digio Test
-
 import UIKit
 
 class LoadingViewController: UIViewController {

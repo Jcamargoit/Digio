@@ -1,6 +1,3 @@
-//  UIView+Extensions.swift
-//  Digio Test
-
 import UIKit
 
 extension UIView {
