@@ -7,6 +7,34 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9C176A9E2833D8E100805038 /* CollectionViewCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C176A9D2833D8E100805038 /* CollectionViewCellModel.swift */; };
+		9C176AA02833E3ED00805038 /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C176A9F2833E3ED00805038 /* LoadingViewController.swift */; };
+		9C176AA42833E9B600805038 /* ProductsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C176AA32833E9B600805038 /* ProductsTableViewCell.swift */; };
+		9C176AA62833E9C700805038 /* ProductsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C176AA52833E9C700805038 /* ProductsCollectionViewCell.swift */; };
+		9C176AA92833ECA500805038 /* CashTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C176AA72833ECA500805038 /* CashTableViewCell.swift */; };
+		9C176AAA2833ECA500805038 /* CashCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C176AA82833ECA500805038 /* CashCollectionViewCell.swift */; };
+		9C3F228E282A00B400572245 /* HomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3F228D282A00B400572245 /* HomeModel.swift */; };
+		9C3F2291282A010100572245 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3F2290282A010100572245 /* HomeViewModel.swift */; };
+		9C3F2294282A09DF00572245 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3F2293282A09DF00572245 /* UIColor+Extension.swift */; };
+		9C3F2299282A0E7E00572245 /* HomeUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3F2298282A0E7E00572245 /* HomeUseCase.swift */; };
+		9C3F229C282A102400572245 /* HomeResultCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3F229B282A102400572245 /* HomeResultCodable.swift */; };
+		9C44D0E82829859100CBD986 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C44D0E72829859100CBD986 /* APIService.swift */; };
+		9C47CD9E282964F6001C40F9 /* LaucheScreenController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C47CD9D282964F6001C40F9 /* LaucheScreenController.swift */; };
+		9C47CDA228296663001C40F9 /* LauncheScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C47CDA128296663001C40F9 /* LauncheScreenView.swift */; };
+		9C7DFBE6282B400500FF0AF2 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C7DFBE5282B400500FF0AF2 /* Constants.swift */; };
+		9C7DFBEB282B583E00FF0AF2 /* HomeResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C7DFBEA282B583E00FF0AF2 /* HomeResultView.swift */; };
+		9C7DFBED282B587200FF0AF2 /* HomeResultController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C7DFBEC282B587200FF0AF2 /* HomeResultController.swift */; };
+		9C7DFBEF282B603B00FF0AF2 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C7DFBEE282B603A00FF0AF2 /* UIView+Extensions.swift */; };
+		9C802302282D9F3E002C8C5C /* SpotlightTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C802301282D9F3E002C8C5C /* SpotlightTableViewCell.swift */; };
+		9C802306282DA388002C8C5C /* SpotlighCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C802305282DA388002C8C5C /* SpotlighCollectionViewCell.swift */; };
+		9C9B723E2837CA3700A5CFB0 /* LockOrientationApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C9B723D2837CA3700A5CFB0 /* LockOrientationApp.swift */; };
+		9C9B72402837D91800A5CFB0 /* CheckImageUrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C9B723F2837D91800A5CFB0 /* CheckImageUrl.swift */; };
+		9C9F784E2835B5790047ABDF /* ShowLoading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C9F784D2835B5790047ABDF /* ShowLoading.swift */; };
+		9C9F78502835B5900047ABDF /* SimplePopUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C9F784F2835B58F0047ABDF /* SimplePopUp.swift */; };
+		9C9F78D22835C4D70047ABDF /* Digio_SnapshotTesting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C9F78D12835C4D70047ABDF /* Digio_SnapshotTesting.swift */; };
+		9CABF4772835D0F400CF41C9 /* ApiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CABF4762835D0F400CF41C9 /* ApiTests.swift */; };
+		9CB522F92836A1F000083481 /* CollectionTableViewCellDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CB522F82836A1F000083481 /* CollectionTableViewCellDelegate.swift */; };
+		9CB522FB2836A44100083481 /* ResultCollectionViewCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CB522FA2836A44100083481 /* ResultCollectionViewCellModel.swift */; };
 		9CC2F38A2822BC32001BC880 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC2F3892822BC32001BC880 /* AppDelegate.swift */; };
 		9CC2F38C2822BC32001BC880 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC2F38B2822BC32001BC880 /* SceneDelegate.swift */; };
 		9CC2F3932822BC33001BC880 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9CC2F3922822BC33001BC880 /* Assets.xcassets */; };
@@ -15,10 +43,16 @@
 		9CC2F3AB2822BC33001BC880 /* Digio_TestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC2F3AA2822BC33001BC880 /* Digio_TestUITests.swift */; };
 		9CC2F3AD2822BC33001BC880 /* Digio_TestUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC2F3AC2822BC33001BC880 /* Digio_TestUITestsLaunchTests.swift */; };
 		9CC2F3BB2822C3E0001BC880 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC2F3B92822C3E0001BC880 /* HomeController.swift */; };
-		9CC2F3BC2822C3E0001BC880 /* HomeController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9CC2F3BA2822C3E0001BC880 /* HomeController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		9C9F78D32835C4D70047ABDF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9CC2F37E2822BC31001BC880 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9CC2F3852822BC32001BC880;
+			remoteInfo = "Digio Test";
+		};
 		9CC2F39D2822BC33001BC880 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 9CC2F37E2822BC31001BC880 /* Project object */;
@@ -36,6 +70,35 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9C176A9D2833D8E100805038 /* CollectionViewCellModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewCellModel.swift; sourceTree = "<group>"; };
+		9C176A9F2833E3ED00805038 /* LoadingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
+		9C176AA32833E9B600805038 /* ProductsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsTableViewCell.swift; sourceTree = "<group>"; };
+		9C176AA52833E9C700805038 /* ProductsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsCollectionViewCell.swift; sourceTree = "<group>"; };
+		9C176AA72833ECA500805038 /* CashTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CashTableViewCell.swift; sourceTree = "<group>"; };
+		9C176AA82833ECA500805038 /* CashCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CashCollectionViewCell.swift; sourceTree = "<group>"; };
+		9C3F228D282A00B400572245 /* HomeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModel.swift; sourceTree = "<group>"; };
+		9C3F2290282A010100572245 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		9C3F2293282A09DF00572245 /* UIColor+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		9C3F2298282A0E7E00572245 /* HomeUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeUseCase.swift; sourceTree = "<group>"; };
+		9C3F229B282A102400572245 /* HomeResultCodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeResultCodable.swift; sourceTree = "<group>"; };
+		9C44D0E72829859100CBD986 /* APIService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		9C47CD9D282964F6001C40F9 /* LaucheScreenController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaucheScreenController.swift; sourceTree = "<group>"; };
+		9C47CDA128296663001C40F9 /* LauncheScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LauncheScreenView.swift; sourceTree = "<group>"; };
+		9C7DFBE5282B400500FF0AF2 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		9C7DFBEA282B583E00FF0AF2 /* HomeResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeResultView.swift; sourceTree = "<group>"; };
+		9C7DFBEC282B587200FF0AF2 /* HomeResultController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeResultController.swift; sourceTree = "<group>"; };
+		9C7DFBEE282B603A00FF0AF2 /* UIView+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
+		9C802301282D9F3E002C8C5C /* SpotlightTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotlightTableViewCell.swift; sourceTree = "<group>"; };
+		9C802305282DA388002C8C5C /* SpotlighCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotlighCollectionViewCell.swift; sourceTree = "<group>"; };
+		9C9B723D2837CA3700A5CFB0 /* LockOrientationApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LockOrientationApp.swift; sourceTree = "<group>"; };
+		9C9B723F2837D91800A5CFB0 /* CheckImageUrl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckImageUrl.swift; sourceTree = "<group>"; };
+		9C9F784D2835B5790047ABDF /* ShowLoading.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowLoading.swift; sourceTree = "<group>"; };
+		9C9F784F2835B58F0047ABDF /* SimplePopUp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimplePopUp.swift; sourceTree = "<group>"; };
+		9C9F78CF2835C4D70047ABDF /* Digio SnapshotTesting.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Digio SnapshotTesting.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9C9F78D12835C4D70047ABDF /* Digio_SnapshotTesting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Digio_SnapshotTesting.swift; sourceTree = "<group>"; };
+		9CABF4762835D0F400CF41C9 /* ApiTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiTests.swift; sourceTree = "<group>"; };
+		9CB522F82836A1F000083481 /* CollectionTableViewCellDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionTableViewCellDelegate.swift; sourceTree = "<group>"; };
+		9CB522FA2836A44100083481 /* ResultCollectionViewCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultCollectionViewCellModel.swift; sourceTree = "<group>"; };
 		9CC2F3862822BC32001BC880 /* Digio Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Digio Test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9CC2F3892822BC32001BC880 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9CC2F38B2822BC32001BC880 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -48,10 +111,16 @@
 		9CC2F3AA2822BC33001BC880 /* Digio_TestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Digio_TestUITests.swift; sourceTree = "<group>"; };
 		9CC2F3AC2822BC33001BC880 /* Digio_TestUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Digio_TestUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		9CC2F3B92822C3E0001BC880 /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
-		9CC2F3BA2822C3E0001BC880 /* HomeController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		9C9F78CC2835C4D70047ABDF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		9CC2F3832822BC32001BC880 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -76,13 +145,121 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6C3E033A7600C5CE926BDE57 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		9C3F228C282A009B00572245 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9C3F228D282A00B400572245 /* HomeModel.swift */,
+				9C176A9D2833D8E100805038 /* CollectionViewCellModel.swift */,
+				9CB522FA2836A44100083481 /* ResultCollectionViewCellModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		9C3F228F282A00E900572245 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				9C3F2290282A010100572245 /* HomeViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		9C3F2292282A09CF00572245 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				9C9F784D2835B5790047ABDF /* ShowLoading.swift */,
+				9C9F784F2835B58F0047ABDF /* SimplePopUp.swift */,
+				9C3F2293282A09DF00572245 /* UIColor+Extension.swift */,
+				9C7DFBEE282B603A00FF0AF2 /* UIView+Extensions.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		9C3F2297282A0DDB00572245 /* UseCase */ = {
+			isa = PBXGroup;
+			children = (
+				9C3F2298282A0E7E00572245 /* HomeUseCase.swift */,
+			);
+			path = UseCase;
+			sourceTree = "<group>";
+		};
+		9C3F229A282A0F4600572245 /* Codable */ = {
+			isa = PBXGroup;
+			children = (
+				9C3F229B282A102400572245 /* HomeResultCodable.swift */,
+			);
+			path = Codable;
+			sourceTree = "<group>";
+		};
+		9C44D0E62829857700CBD986 /* APIService */ = {
+			isa = PBXGroup;
+			children = (
+				9C44D0E72829859100CBD986 /* APIService.swift */,
+			);
+			path = APIService;
+			sourceTree = "<group>";
+		};
+		9C7DFBE4282B3FF900FF0AF2 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				9C7DFBE5282B400500FF0AF2 /* Constants.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		9C8022FE282D9E89002C8C5C /* CustomCell */ = {
+			isa = PBXGroup;
+			children = (
+				9C176AA82833ECA500805038 /* CashCollectionViewCell.swift */,
+				9C176AA72833ECA500805038 /* CashTableViewCell.swift */,
+				9C176AA52833E9C700805038 /* ProductsCollectionViewCell.swift */,
+				9C176AA32833E9B600805038 /* ProductsTableViewCell.swift */,
+				9C802305282DA388002C8C5C /* SpotlighCollectionViewCell.swift */,
+				9C802301282D9F3E002C8C5C /* SpotlightTableViewCell.swift */,
+			);
+			path = CustomCell;
+			sourceTree = "<group>";
+		};
+		9C9B723C2837CA2600A5CFB0 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				9C9B723D2837CA3700A5CFB0 /* LockOrientationApp.swift */,
+				9C9B723F2837D91800A5CFB0 /* CheckImageUrl.swift */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
+		9C9F78D02835C4D70047ABDF /* Digio SnapshotTesting */ = {
+			isa = PBXGroup;
+			children = (
+				9C9F78D12835C4D70047ABDF /* Digio_SnapshotTesting.swift */,
+			);
+			path = "Digio SnapshotTesting";
+			sourceTree = "<group>";
+		};
+		9CB522F72836A1DF00083481 /* Protocolo */ = {
+			isa = PBXGroup;
+			children = (
+				9CB522F82836A1F000083481 /* CollectionTableViewCellDelegate.swift */,
+			);
+			path = Protocolo;
+			sourceTree = "<group>";
+		};
 		9CC2F37D2822BC31001BC880 = {
 			isa = PBXGroup;
 			children = (
 				9CC2F3882822BC32001BC880 /* Digio Test */,
 				9CC2F39F2822BC33001BC880 /* Digio TestTests */,
 				9CC2F3A92822BC33001BC880 /* Digio TestUITests */,
+				9C9F78D02835C4D70047ABDF /* Digio SnapshotTesting */,
 				9CC2F3872822BC32001BC880 /* Products */,
+				6C3E033A7600C5CE926BDE57 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -92,6 +269,7 @@
 				9CC2F3862822BC32001BC880 /* Digio Test.app */,
 				9CC2F39C2822BC33001BC880 /* Digio TestTests.xctest */,
 				9CC2F3A62822BC33001BC880 /* Digio TestUITests.xctest */,
+				9C9F78CF2835C4D70047ABDF /* Digio SnapshotTesting.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -99,9 +277,19 @@
 		9CC2F3882822BC32001BC880 /* Digio Test */ = {
 			isa = PBXGroup;
 			children = (
+				9C44D0E62829857700CBD986 /* APIService */,
+				9C3F229A282A0F4600572245 /* Codable */,
 				9CC2F3BD2822C3EA001BC880 /* Controller */,
-				9CC2F3BE2822C3FD001BC880 /* View */,
+				9C7DFBE4282B3FF900FF0AF2 /* Constants */,
+				9C8022FE282D9E89002C8C5C /* CustomCell */,
 				9CC2F3BF2822C5D8001BC880 /* Delegate */,
+				9C3F2292282A09CF00572245 /* Extension */,
+				9C3F228C282A009B00572245 /* Model */,
+				9CB522F72836A1DF00083481 /* Protocolo */,
+				9C3F2297282A0DDB00572245 /* UseCase */,
+				9C9B723C2837CA2600A5CFB0 /* Utility */,
+				9CC2F3BE2822C3FD001BC880 /* View */,
+				9C3F228F282A00E900572245 /* ViewModel */,
 				9CC2F3922822BC33001BC880 /* Assets.xcassets */,
 				9CC2F3972822BC33001BC880 /* Info.plist */,
 			);
@@ -111,6 +299,7 @@
 		9CC2F39F2822BC33001BC880 /* Digio TestTests */ = {
 			isa = PBXGroup;
 			children = (
+				9CABF4762835D0F400CF41C9 /* ApiTests.swift */,
 				9CC2F3A02822BC33001BC880 /* Digio_TestTests.swift */,
 			);
 			path = "Digio TestTests";
@@ -129,6 +318,9 @@
 			isa = PBXGroup;
 			children = (
 				9CC2F3B92822C3E0001BC880 /* HomeController.swift */,
+				9C47CD9D282964F6001C40F9 /* LaucheScreenController.swift */,
+				9C176A9F2833E3ED00805038 /* LoadingViewController.swift */,
+				9C7DFBEC282B587200FF0AF2 /* HomeResultController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -136,8 +328,9 @@
 		9CC2F3BE2822C3FD001BC880 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				9C47CDA128296663001C40F9 /* LauncheScreenView.swift */,
 				9CC2F3942822BC33001BC880 /* LaunchScreen.storyboard */,
-				9CC2F3BA2822C3E0001BC880 /* HomeController.xib */,
+				9C7DFBEA282B583E00FF0AF2 /* HomeResultView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -154,6 +347,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		9C9F78CE2835C4D70047ABDF /* Digio SnapshotTesting */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9C9F78D52835C4D70047ABDF /* Build configuration list for PBXNativeTarget "Digio SnapshotTesting" */;
+			buildPhases = (
+				9C9F78CB2835C4D70047ABDF /* Sources */,
+				9C9F78CC2835C4D70047ABDF /* Frameworks */,
+				9C9F78CD2835C4D70047ABDF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9C9F78D42835C4D70047ABDF /* PBXTargetDependency */,
+			);
+			name = "Digio SnapshotTesting";
+			productName = "Digio SnapshotTesting";
+			productReference = 9C9F78CF2835C4D70047ABDF /* Digio SnapshotTesting.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		9CC2F3852822BC32001BC880 /* Digio Test */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9CC2F3B02822BC33001BC880 /* Build configuration list for PBXNativeTarget "Digio Test" */;
@@ -161,6 +372,7 @@
 				9CC2F3822822BC32001BC880 /* Sources */,
 				9CC2F3832822BC32001BC880 /* Frameworks */,
 				9CC2F3842822BC32001BC880 /* Resources */,
+				9C3346F228296E0200904A52 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -214,9 +426,13 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1320;
+				LastSwiftUpdateCheck = 1330;
 				LastUpgradeCheck = 1320;
 				TargetAttributes = {
+					9C9F78CE2835C4D70047ABDF = {
+						CreatedOnToolsVersion = 13.3.1;
+						TestTargetID = 9CC2F3852822BC32001BC880;
+					};
 					9CC2F3852822BC32001BC880 = {
 						CreatedOnToolsVersion = 13.2.1;
 					};
@@ -246,17 +462,24 @@
 				9CC2F3852822BC32001BC880 /* Digio Test */,
 				9CC2F39B2822BC33001BC880 /* Digio TestTests */,
 				9CC2F3A52822BC33001BC880 /* Digio TestUITests */,
+				9C9F78CE2835C4D70047ABDF /* Digio SnapshotTesting */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		9C9F78CD2835C4D70047ABDF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		9CC2F3842822BC32001BC880 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				9CC2F3962822BC33001BC880 /* LaunchScreen.storyboard in Resources */,
-				9CC2F3BC2822C3E0001BC880 /* HomeController.xib in Resources */,
 				9CC2F3932822BC33001BC880 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -277,14 +500,68 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		9C3346F228296E0200904A52 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nif which \"${PODS_ROOT}/SwiftLint/swiftlint\" >/dev/null; then\n    ${PODS_ROOT}/SwiftLint/swiftlint\nelse\n    echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
+		9C9F78CB2835C4D70047ABDF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9C9F78D22835C4D70047ABDF /* Digio_SnapshotTesting.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		9CC2F3822822BC32001BC880 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9C3F229C282A102400572245 /* HomeResultCodable.swift in Sources */,
+				9C9F784E2835B5790047ABDF /* ShowLoading.swift in Sources */,
+				9C176AA62833E9C700805038 /* ProductsCollectionViewCell.swift in Sources */,
 				9CC2F3BB2822C3E0001BC880 /* HomeController.swift in Sources */,
+				9C3F2291282A010100572245 /* HomeViewModel.swift in Sources */,
+				9CB522F92836A1F000083481 /* CollectionTableViewCellDelegate.swift in Sources */,
+				9C7DFBEB282B583E00FF0AF2 /* HomeResultView.swift in Sources */,
+				9C176A9E2833D8E100805038 /* CollectionViewCellModel.swift in Sources */,
+				9C9B723E2837CA3700A5CFB0 /* LockOrientationApp.swift in Sources */,
+				9C176AA92833ECA500805038 /* CashTableViewCell.swift in Sources */,
+				9C44D0E82829859100CBD986 /* APIService.swift in Sources */,
+				9C47CDA228296663001C40F9 /* LauncheScreenView.swift in Sources */,
+				9C9F78502835B5900047ABDF /* SimplePopUp.swift in Sources */,
+				9C7DFBEF282B603B00FF0AF2 /* UIView+Extensions.swift in Sources */,
+				9C47CD9E282964F6001C40F9 /* LaucheScreenController.swift in Sources */,
+				9C176AAA2833ECA500805038 /* CashCollectionViewCell.swift in Sources */,
+				9C802306282DA388002C8C5C /* SpotlighCollectionViewCell.swift in Sources */,
+				9C802302282D9F3E002C8C5C /* SpotlightTableViewCell.swift in Sources */,
+				9C3F2299282A0E7E00572245 /* HomeUseCase.swift in Sources */,
+				9CB522FB2836A44100083481 /* ResultCollectionViewCellModel.swift in Sources */,
+				9C9B72402837D91800A5CFB0 /* CheckImageUrl.swift in Sources */,
+				9C176AA02833E3ED00805038 /* LoadingViewController.swift in Sources */,
+				9C3F228E282A00B400572245 /* HomeModel.swift in Sources */,
 				9CC2F38A2822BC32001BC880 /* AppDelegate.swift in Sources */,
+				9C7DFBE6282B400500FF0AF2 /* Constants.swift in Sources */,
+				9C7DFBED282B587200FF0AF2 /* HomeResultController.swift in Sources */,
 				9CC2F38C2822BC32001BC880 /* SceneDelegate.swift in Sources */,
+				9C176AA42833E9B600805038 /* ProductsTableViewCell.swift in Sources */,
+				9C3F2294282A09DF00572245 /* UIColor+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -292,6 +569,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9CABF4772835D0F400CF41C9 /* ApiTests.swift in Sources */,
 				9CC2F3A12822BC33001BC880 /* Digio_TestTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -308,6 +586,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		9C9F78D42835C4D70047ABDF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9CC2F3852822BC32001BC880 /* Digio Test */;
+			targetProxy = 9C9F78D32835C4D70047ABDF /* PBXContainerItemProxy */;
+		};
 		9CC2F39E2822BC33001BC880 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 9CC2F3852822BC32001BC880 /* Digio Test */;
@@ -332,6 +615,42 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		9C9F78D62835C4D70047ABDF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.josecarlos.Digio-SnapshotTesting";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Digio Test.app/Digio Test";
+			};
+			name = Debug;
+		};
+		9C9F78D72835C4D70047ABDF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.josecarlos.Digio-SnapshotTesting";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Digio Test.app/Digio Test";
+			};
+			name = Release;
+		};
 		9CC2F3AE2822BC33001BC880 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -455,13 +774,17 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = UJ394G4MSU;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Digio Test/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = digio;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UIUserInterfaceStyle = ligth;
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -471,7 +794,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -482,13 +805,17 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = UJ394G4MSU;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Digio Test/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = digio;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UIUserInterfaceStyle = ligth;
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -498,7 +825,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -577,6 +904,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		9C9F78D52835C4D70047ABDF /* Build configuration list for PBXNativeTarget "Digio SnapshotTesting" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9C9F78D62835C4D70047ABDF /* Debug */,
+				9C9F78D72835C4D70047ABDF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		9CC2F3812822BC31001BC880 /* Build configuration list for PBXProject "Digio Test" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
