@@ -155,8 +155,8 @@
 		9C3F228C282A009B00572245 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				9C3F228D282A00B400572245 /* HomeModel.swift */,
 				9C176A9D2833D8E100805038 /* CollectionViewCellModel.swift */,
+				9C3F228D282A00B400572245 /* HomeModel.swift */,
 				9CB522FA2836A44100083481 /* ResultCollectionViewCellModel.swift */,
 			);
 			path = Model;
@@ -229,8 +229,8 @@
 		9C9B723C2837CA2600A5CFB0 /* Utility */ = {
 			isa = PBXGroup;
 			children = (
-				9C9B723D2837CA3700A5CFB0 /* LockOrientationApp.swift */,
 				9C9B723F2837D91800A5CFB0 /* CheckImageUrl.swift */,
+				9C9B723D2837CA3700A5CFB0 /* LockOrientationApp.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -318,9 +318,9 @@
 			isa = PBXGroup;
 			children = (
 				9CC2F3B92822C3E0001BC880 /* HomeController.swift */,
+				9C7DFBEC282B587200FF0AF2 /* HomeResultController.swift */,
 				9C47CD9D282964F6001C40F9 /* LaucheScreenController.swift */,
 				9C176A9F2833E3ED00805038 /* LoadingViewController.swift */,
-				9C7DFBEC282B587200FF0AF2 /* HomeResultController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -328,9 +328,9 @@
 		9CC2F3BE2822C3FD001BC880 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				9C7DFBEA282B583E00FF0AF2 /* HomeResultView.swift */,
 				9C47CDA128296663001C40F9 /* LauncheScreenView.swift */,
 				9CC2F3942822BC33001BC880 /* LaunchScreen.storyboard */,
-				9C7DFBEA282B583E00FF0AF2 /* HomeResultView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
